@@ -12,7 +12,9 @@ def int_10_inc(df):
 
 def str_trim_space(df):
     for col in [field.name for field in df.schema.fields if isinstance(field.dataType, StringType)]:
-        df = df.withColumn(col, F.trim(F.col(col)))
+        df = df.withColumns({
+            col: F.trim(F.col(col))
+            })
     return df
 
 # Define schema
