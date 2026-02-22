@@ -2,3 +2,4 @@ psycopg[binary]
 python-dotenv
 pyspark
 ipykernel
+pandas
